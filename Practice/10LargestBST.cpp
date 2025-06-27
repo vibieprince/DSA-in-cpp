@@ -1,6 +1,6 @@
 //  Size of Largest BST in Binary Tree
 
-#include<isostream>
+#include<iostream>
 using namespace std;
 // Following is Binary Tree Node structure:
 class TreeNode
