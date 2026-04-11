@@ -1,0 +1,21 @@
+1. Hashing + Frequency Pattern
+2. Sliding  Window + Two Pointers
+3. Binary Search on answer
+4. String algorithms
+    - Rolling Hash 
+    - String Matching
+5. Trie
+6. Prefix Sum/ Difference Array
+7. Greedy + Sorting
+8. Backtracking/ Combinatorics
+9. Dynamic Programming (Moderate)
+10. Graphs (Conceptual + Coding)
+11. Divide & Conquer
+12. Data Structure Design
+    - Custom Data Structures
+    - LRU Cache Design 
+
+
+Easy -> Hashing/Frequency
+Medium -> Sliding Window/ Two Pointers
+Hard/Medium -> Binary Search OR Greedy 

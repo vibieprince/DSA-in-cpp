@@ -1,24 +1,25 @@
 #include<iostream>
-#include<unordered_map>
+#include<vector>
 #include<list>
+#include<unordered_map>
 using namespace std;
-template <typename T>
 
-class graph{
-    public:
+class Graph{
+public:
     unordered_map<int,list<int>> adj;
+    
+    void addEdge(int u,int v,bool direction){
+        // direction - true = directed
+        // direction - false = undirected
 
-    void addEdge(T u,T v,bool direction){
-        // direction = 0 --> undirected
-        // direction = 1 --> directed
-
-        // create an edge from u to v
         adj[u].push_back(v);
-        if(!direction) adj[v].push_back(u);  
+
+        if(!direction)
+            adj[v].push_back(u);
     }
 
     void printAdjList(){
-        for(auto i:adj){
+        for(auto i : adj){
             cout<<i.first<<"->";
             for(auto j : i.second)
                 cout<<j<<", ";
@@ -28,23 +29,21 @@ class graph{
 };
 
 int main(){
-    int n;
-    cout<<"Enter the number of nodes : "<<endl;
-    cin>>n;
+    int nodes,edges;
+    cout<<"Enter the number of nodes"<<endl;
+    cin>>nodes;
 
-    int m;
-    cout<<"Enter the number of edges : "<<endl;
-    cin>>m; 
+    cout<<"Enter the number of edges"<<endl;
+    cin>>edges;
 
-    graph<int> g;
-    for(int i=0;i<=n;i++){
+    Graph g;
+
+    for(int i=0;i<edges;i++){
         int u,v;
         cin>>u>>v;
-        // Creatin an undirected graph
-        g.addEdge(u,v,0);
+        g.addEdge(u,v,false); // undirected graph
     }
 
-    // printing graph
     g.printAdjList();
     return 0;
 }
